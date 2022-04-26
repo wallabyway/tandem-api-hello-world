@@ -1,0 +1,17 @@
+{
+  "name": "tandem-hello-world-3legged-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "author": "michael beale, Autodesk",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^3.28.0",
+    "fastify-cookie": "^5.6.1",
+    "fastify-static": "^4.6.1",
+    "node-fetch": "^3.2.3"
+  }
+}
