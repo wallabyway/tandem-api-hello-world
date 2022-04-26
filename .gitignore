@@ -1,5 +1,5 @@
 # do not save environment keys into git 
-launch.json
+#launch.json
 
 # keep the repo minimal
 package-lock.json

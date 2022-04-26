@@ -1,0 +1,31 @@
+{
+  "name": "Tandem - Hello World",
+  "description": "Tandem - Hello World example",
+  "repository": "https://github.com/wallabyway/tandem-hello-world",
+  "logo": "https://knowledge.autodesk.com/sites/default/files/product-logo-sm/autodesk-tandem-badge-2023-75x75.png",
+  "keywords": [
+    "framework",
+    "autodesk",
+    "forge",
+    "template",
+    "tandem"
+  ],
+  "env": {
+    "FORGE_CLIENT_ID": {
+      "description": "Forge Client ID"
+    },
+    "FORGE_CLIENT_SECRET": {
+      "description": "Forge Client Secret"
+    },
+    "FORGE_CALLBACK_URL": {
+      "description": "Callback URL of your Tandem app, required for 3-legged OAuth",
+      "value": "https://<<YOUR HEROKU APP NAME HERE>>.herokuapp.com/callback/oauth"
+    },
+    "FORGE_DEFAULT_URN": {
+      "description": "make forge-viewer load a default Tandem view, by specifying a facility URN here",
+      "value": "dxFG"
+    }
+  },
+  "website": "https://tandem-hello-world.herokuapp.com/",
+  "success_url": "/"
+}
