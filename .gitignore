@@ -1,7 +1,0 @@
-# do not save environment keys into git 
-#launch.json
-
-# keep the repo minimal
-package-lock.json
-.DS_Store
-node_modules/
