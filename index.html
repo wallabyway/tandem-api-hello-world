@@ -58,7 +58,7 @@ $('userprofile').addEventListener("click", logout);
     }
 
     function doRedirection(forge_clientID, scope) {
-        const redirect_uri = encodeURIComponent(location.origin)+"/";
+        const redirect_uri = encodeURIComponent(location.href.split('#')[0]);
         location.href = `https://developer.api.autodesk.com/authentication/v1/authorize?response_type=token&client_id=${forge_clientID}&redirect_uri=${redirect_uri}&scope=${encodeURIComponent(scope)}`;
     }
 
