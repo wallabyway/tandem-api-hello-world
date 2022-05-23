@@ -1,27 +1,30 @@
 <header>
     <link href="https://tandem.autodesk.com/viewer/style.min.css" rel="stylesheet" type="text/css">
-
+    <link href="https://tandem.autodesk.com/client/index-ELLCBQ7R.css" rel="stylesheet" type="text/css">
     <style>
-        body { font-family: helvetica;sans-serif; margin: 0; padding: 0; overflow: hidden;}
-        .nav ul { background-color: rgba(20,30,70,0.5); list-style-type: none; margin: 0; padding: 5px; position: fixed; top: 0; width: 100%; z-index: 10}
+        .button:hover {background-color:rgb(90,90,90);}
+        .nav img:hover {border:2px solid lightgray; transform:translateY(-2px);}
+        body { font-family: ArtifaktElement; font-size:14px; font-weight:600; -webkit-font-smoothing: antialiased; margin: 0; padding: 0; overflow: hidden;}
+        .nav ul { background-color: rgb(55,55,55); list-style-type: none; margin: 0; padding: 5px; position: fixed; top: 0; width: 100%; z-index: 10}
         .nav li a { color: white; text-decoration: none; }
-        .nav li img { height: 38px; border-radius: 50%; }
+        .nav li img { height: 38px; border-radius: 50%; line-height:35px }
         .nav li { float: right;  display: block; padding: 5px; height: 40px; line-height: 40px; }
         .nav .left { float: left }
-        .button { margin: 4px; padding: 0 10px 0 10px !important; border: 3px solid white; border-radius: 15px;  }
+        .button { margin: 4px; padding: 0 10px 0 10px !important; border: 2px solid white; border-radius: 10px;  }
         #viewer { width:100%;  height:calc(100% - 65px); position:fixed; top:65px }
+        #combo { margin:1px; height: calc(2.25rem + 2px); border-radius: 10px;padding: 5px;}
     </style>
 </header>
 
 <body>
-<div class="nav"><ul>
-    <li class="left"><img src="https://thumbs.dreamstime.com/t/hand-drawn-headquarters-doodle-sketch-style-icon-military-decoration-element-isolated-white-background-flat-design-vector-141216432.jpg"/></li>
-    <li class="left"><a href="https://intandem.autodesk.com">Tandem API "Hello World"</a></li>
-    <li class="left"><select id="combo" style="margin:10px"></select>
-    </li>
+<div class="nav"><ul> 
+    <!-- Nav ToolBar -->
+    <li class="left"><img title = "Your Logo Here" src="https://thumbs.dreamstime.com/t/hand-drawn-headquarters-doodle-sketch-style-icon-military-decoration-element-isolated-white-background-flat-design-vector-141216432.jpg"/></li>
+    <li class="left"><a href="https://intandem.autodesk.com">Hello World </a></li>
+    <li class="left"><select id="combo" style="font-family:ArtifaktElement"></select></li>
+    <li><a href="https://github.com/wallabyway/tandem-api-hello-world/"><img style="height:25px; padding:10px" src="https://github.githubassets.com/favicons/favicon-dark.png"/></a></li>
     <li><a href="#" id="userprofile"></a></li>
     <li class="button"><a href="#" id="loginout">Login</a></li>
-    <li><a href="https://github.com/wallabyway/tandem-api-hello-world/"><img style="" src="https://github.githubassets.com/favicons/favicon.png"/></a></li>
 </ul>
 </div>
 <div id="viewer"></div>
@@ -110,7 +113,7 @@ class loginUI {
             headers : { "Authorization":`Bearer ${this.token}`}
         });
         this.user = await res.json();
-        $(div).innerHTML=`${this.user.firstName} ${this.user.lastName}</li><li><img src="${this.user.profileImages.sizeX40}"/></li>`
+        $(div).innerHTML=`<li><img src="${this.user.profileImages.sizeX40}" title="${this.user.firstName} ${this.user.lastName}"/></li>`
     }
 }
 
