@@ -37,7 +37,10 @@ class tandemViewer {
     }      
 }
 
-
+// This example shows 3 things:
+//  1. How to Load a Model from Tandem (defaults to the 1st Facility)
+//  2. Changing colors of elements randomly
+//  3. Hiding and Showing elements (visibility)
 async function main() {
     const $ = (id) => {return document.getElementById(id)};
 
