@@ -22,10 +22,10 @@ An example of a Basic Tandem Viewer in a browser, that can be embedded in PowerB
 ### 2. CLIENT SETUP
 
 
-1. Add your endpoint into [index.html](index.htmlL32), like this:
+1. Add your endpoint into [app.js](app.jsL4), and replace the 'xxxxxx' like this:
 
 ```
-<script src="https://xxx.lambda-url.us-west-2.on.aws"></script> 
+const token_URL = "https://xxxxxx.lambda-url.us-west-2.on.aws";
 ```
 
 
