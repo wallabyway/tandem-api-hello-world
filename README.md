@@ -7,10 +7,10 @@ An example of a Basic Tandem Viewer in a browser, that can be embedded in PowerB
 
 ## SETUP
 
-### 1. SERVER ENDPOINT
+### 1. AWS SERVER ENDPOINT
 
-1. Create an [APS App](https://tutorials.autodesk.io), then add its `APS_CLIENT_ID` & `APS_SECRET` to `index.js`
-2. Copy/Paste the `index.js` code into AWS console, into a new Lambda function `index.js`
+1. Create an [APS App](https://tutorials.autodesk.io), then add its `APS_CLIENT_ID` & `APS_SECRET` to `aws_lambda.js`
+2. Copy/Paste the `aws_lambda.js` code into AWS console, into a new Lambda function `index.js`
 3. Publish your new Lambda fn, with Node.js Runtime = Node v18+
 4. Add you `APS_CLIENT_ID` to Tandem: https://wallabyway.github.io/dummy-docs/gettingStarted/intro.html#adding-permissions-to-tandem
 
@@ -28,3 +28,15 @@ An example of a Basic Tandem Viewer in a browser, that can be embedded in PowerB
 <script src="https://xxx.lambda-url.us-west-2.on.aws"></script> 
 ```
 
+
+### (optional) Local debugging
+
+Run the python local static server with token generation endpoint "/token"
+
+##### install it: 
+
+> `pip3 install urllib3==1.26.6`
+
+##### run it:
+
+> `python3 server.py`
