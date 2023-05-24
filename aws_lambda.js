@@ -29,9 +29,9 @@ exports.handler = async (event) => {
         statusCode: 200,
         headers: {
             'Content-Type': 'text/html',
+            'Access-Control-Allow-Origin': '*'
         },
-        //body: `${ json.access_token }` // tradional way, but watch out for CORS issues, and setting up a local server for debugging
-        body: `var _access_token = "${ json.access_token }";` // JSONP global variable style, avoids setting up CORS permissions
+        body: `${ json.access_token }`
     };
     return response;
 };
