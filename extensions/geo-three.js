@@ -15,7 +15,8 @@ class GeoThreeExtension extends Autodesk.Viewing.Extension {
         var provider = new Geo.BingMapsProvider(DEV_BING_API_KEY, Geo.BingMapsProvider.ROAD)
 
         var map = new Geo.MapView(Geo.MapView.PLANAR, provider);
-        map.position.set(14900,-27300,-65);
+        //map.position.set(14900,-27300,-65);
+		map.position.set(-77000,-42000, -65);
         map.updateMatrixWorld(false);
 
         viewer.impl.createOverlayScene("map");
@@ -25,7 +26,8 @@ class GeoThreeExtension extends Autodesk.Viewing.Extension {
 		viewer.autocam.shotParams.duration = 3;
         var cam = viewer.getCamera();
 
-        //var coords = Geo.UnitsUtils.datumsToSpherical(40.940119, -8.535589);
+        var coords = Geo.UnitsUtils.datumsToSpherical(40.0223963, -79.8866722);
+		console.log(coords);
         //cam.target.set(coords.x, 0, -coords.y);
         //cam.position.set(0, 1000, 0);
 
@@ -246,7 +248,8 @@ Autodesk.Viewing.theExtensionManager.registerExtension('GeoThreeExtension', GeoT
 	UnitsUtils.EARTH_ORIGIN = UnitsUtils.EARTH_PERIMETER / 2.0;
 
 	class MapPlaneNode extends MapNode {
-	    constructor(parentNode = null, mapView = null, location = MapNode.ROOT, level = 7, x = 20, y = 49) { // SanFrancisco level = 7, x = 20, y = 49
+	    constructor(parentNode = null, mapView = null, location = MapNode.ROOT, level = 7, x = 35, y = 48) { // SanFrancisco level = 7, x = 20, y = 49
+			// 0320011122310201
 	        super(parentNode, mapView, location, level, x, y, MapPlaneNode.GEOMETRY, new three.MeshBasicMaterial({ disableEnvMap:true, depthTest:true, depthWrite:false,  side: three.DoubleSide, transparent:false, wireframe: false }));
 	        this.matrixAutoUpdate = false;
 	        this.isMesh = true;
