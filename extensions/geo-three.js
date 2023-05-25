@@ -15,7 +15,7 @@ class GeoThreeExtension extends Autodesk.Viewing.Extension {
         var provider = new Geo.BingMapsProvider(DEV_BING_API_KEY, Geo.BingMapsProvider.ROAD)
 
         var map = new Geo.MapView(Geo.MapView.PLANAR, provider);
-        map.position.set(14900,-27300,-45);
+        map.position.set(14900,-27300,-65);
         map.updateMatrixWorld(false);
 
         viewer.impl.createOverlayScene("map");
@@ -29,7 +29,7 @@ class GeoThreeExtension extends Autodesk.Viewing.Extension {
         //cam.target.set(coords.x, 0, -coords.y);
         //cam.position.set(0, 1000, 0);
 
-        viewer.addEventListener(Autodesk.Viewing.Autodesk.Viewing.GEOMETRY_LOADED_EVENT, () => {
+        viewer.addEventListener(Autodesk.Viewing.GEOMETRY_LOADED_EVENT, () => {
             this.viewer.autocam.toPerspective();
         });
 
