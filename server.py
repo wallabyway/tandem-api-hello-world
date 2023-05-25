@@ -8,8 +8,8 @@ import requests
 from urllib.parse import urlparse, parse_qs
 
 # Replace with your Autodesk APS/Forge client_id and client_secret
-APS_CLIENT_ID = "cw3yYG0wCvDOcPxxfH91UC1KHWuajJyR"
-APS_SECRET = "BsPxv0qdJUvUhBM8"
+APS_CLIENT_ID = "xxxx"
+APS_SECRET = "xxxx"
 TANDEM_SCOPE = "data:read"
 PORT = 8000
 

@@ -22,7 +22,9 @@ An example of a Basic Tandem Viewer in a browser, that can be embedded in PowerB
 ### 2. CLIENT SETUP
 
 
-1. Add your endpoint into [app.js](app.jsL4), and replace the 'xxxxxx' like this:
+1. Get your endpoint URL from AWS... 'xxxxxx'
+2. Comment Line2 and uncomment Line 6 in [app.js](app.jsL6).
+3. Add your URL to Line 6 in [app.js](app.jsL6), like this:
 
 ```
 const token_URL = "https://xxxxxx.lambda-url.us-west-2.on.aws";
@@ -31,12 +33,13 @@ const token_URL = "https://xxxxxx.lambda-url.us-west-2.on.aws";
 
 ### (optional) Local debugging
 
-Run the python local static server with token generation endpoint "/token"
+1. UnComment Line2 in [app.js](app.jsL2)
+2. Run the python local static server, for debugging, like this...
 
-##### install it: 
+```
+> python3 server.py
+> open http://localhost:8000
+```
 
-> `pip3 install urllib3==1.26.6`
+> NOTE: You may need to install urllib: like this `> pip3 install urllib3==1.26.6`
 
-##### run it:
-
-> `python3 server.py`
