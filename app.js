@@ -22,7 +22,7 @@ class tandemViewer {
 
         av.Initializer(options, () => {
             this.viewer = new av.GuiViewer3D(div, {
-                extensions: ['Autodesk.BoxSelection',"GeoThreeExtension"],
+                extensions: ['Autodesk.BoxSelection',/*"GeoThreeExtension"*/],
                 screenModeDelegate: av.NullScreenModeDelegate,
                 theme: 'light-theme',
             });
