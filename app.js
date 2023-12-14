@@ -28,7 +28,7 @@ class tandemViewer {
             });
             this.viewer.start();
             av.endpoint.HTTP_REQUEST_HEADERS['Authorization'] = `Bearer ${_access_token}`;
-            this.app = new av.Private.DtApp({});
+            this.app = new Autodesk.Tandem.DtApp();
             window.DT_APP = this.app;
             resolve(this);
         });
